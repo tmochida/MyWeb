@@ -18,6 +18,22 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl :   'pages/home.html',
             controller  :   'homeCtrl'
         })
+        .when('/about', {
+            templateUrl :   'pages/about.html',
+            controller  :   'aboutCtrl'
+        })
+        .when('/resume', {
+            templateUrl :   'pages/resume.html',
+            controller  :   'resumeCtrl'
+        })
+        .when('/projects', {
+            templateUrl :   'pages/projects.html',
+            controller  :   'projectsCtrl'
+        })
+        .when('/contact', {
+            templateUrl :   'pages/contact.html',
+            controller  :   'contactCtrl'
+        })
         .otherwise({
 		redirectTo: '/'
 	})
