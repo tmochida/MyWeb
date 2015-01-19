@@ -4,7 +4,7 @@
  */
 
 // Declare app module
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
 // Declare app routes
 app.config(function($routeProvider, $locationProvider) {

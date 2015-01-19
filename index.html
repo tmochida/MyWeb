@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-controller="mainCtrl">
 <head>
     <meta charset="utf-8">
     <base href="/">
@@ -10,23 +10,38 @@
     <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/ui-bootstrap-0.11.2.min.js"></script>
     <!-- Angular scripts -->
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
+    <script src="app/services/collapseService.js"></script>
     
     <title>Takeshi Mochida</title>
 </head>
 <body style="padding-top:50px;">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navBarCtrl">
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-click="collapseService.flipState()">
+                    <span class="sr-only">Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Takeshi Mochida</a>
+            </div>
+
             <!-- Navbar -->
-            <div class="navbar-collapse">
+            <div class="navbar-collapse" collapse="collapseService.getState()">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li ng-class="{ active: isActive('/home')}"><a href="#home" ng-click="collapseService.flipState()" >Home</a></li>
+                    <li ng-class="{ active: isActive('/about')}"><a href="#about" ng-click="collapseService.flipState()">About Me</a></li>
+                    <li ng-class="{ active: isActive('/resume')}"><a href="#resume" ng-click="collapseService.flipState()">Resume</a></li>
+                    <li ng-class="{ active: isActive('/projects')}"><a href="#projects" ng-click="collapseService.flipState()">Projects</a></li>
+                    <li ng-class="{ active: isActive('/contact')}"><a href="#contact" ng-click="collapseService.flipState()" >Contact</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->

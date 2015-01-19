@@ -3,6 +3,19 @@
  * Define controllers for app
  */
 
+// MainCtrl
+// Used for controlling collapse state for mobile view
+app.controller('mainCtrl', function($scope, collapseService) {
+  $scope.collapseService = collapseService;
+});
+
+// Controller for navbar
+app.controller('navBarCtrl', function($scope, $location) {
+    $scope.isActive = function(viewLocation) {
+        return viewLocation === $location.path();
+    };
+});
+
 // Declare controllers. Nothing happens for now
 app.controller('homeCtrl', function($scope) {
 });
