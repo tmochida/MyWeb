@@ -10,10 +10,14 @@
     <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
+    <!-- Angular scripts -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
     
     <title>Takeshi Mochida</title>
 </head>
 <body>
-    <p>Hello</p>
+    <!-- Stuff from /pages injected here -->
+    <div ng-view></div>
 </body>
 </html>
