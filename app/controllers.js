@@ -18,17 +18,22 @@ app.controller('navBarCtrl', function($scope, $location) {
 
 // Declare controllers. Nothing happens for now
 app.controller('homeCtrl', function($scope) {
+    $scope.pageClass = 'page-home';
 });
 
 app.controller('aboutCtrl', function($scope) {
+    $scope.pageClass = 'page-about';
 });
 
 app.controller('resumeCtrl', function($scope) {
+    $scope.pageClass = 'page-resume';
 });
 
 app.controller('projectsCtrl', function($scope) {
+    $scope.pageClass = 'page-projects';
 });
 
 app.controller('contactCtrl', function($scope) {
+    $scope.pageClass = 'page-contacts';
 });
 

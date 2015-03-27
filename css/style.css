@@ -1,0 +1,59 @@
+/* navbar styles */
+.navbar-default {
+    z-index:9999;
+    background-color: #000000;
+    border-color: #000000;
+}
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > .active {
+    color: #FFFFFF;
+    background: #000000;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000000;
+    background: #FFFFFF;
+}
+.navbar-default .navbar-nav > li {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+}
+
+html {
+    background: black;
+}
+
+.page {
+    bottom:0;
+    padding-top:200px;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+}
+
+/* Angular animation styles */
+.page.ng-enter {
+    -webkit-backface-visibility: hidden;
+    -webkit-animation:fadeIn 0.5s both ease-in;
+    -moz-animation:fadeIn 0.5s both ease-in;
+    animation:fadeIn 0.5s both ease-in;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.page.ng-leave {
+    -webkit-backface-visibility: hidden;
+    -webkit-animation:fadeOut 0.5s both ease-in;
+    -moz-animation:fadeOut 0.5s both ease-in;
+    animation:fadeOut 0.5s both ease-in;   
+}
+

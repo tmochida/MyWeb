@@ -2,17 +2,21 @@
 <html lang="en" ng-app="app" ng-controller="mainCtrl">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="canonical" href="http://www.takeshimochida.com" /> -->
+    <link rel="icon" sizes="16x16 24x24 32x32 48x48 96x96 152x152" href="favicon.ico">
     <base href="/">
-    
+
     <!-- CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/angular-resource.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
-    <script src="js/ui-bootstrap-0.11.2.min.js"></script>
+    <script src="js/ui-bootstrap-0.12.1.min.js"></script>
     <!-- Angular scripts -->
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
@@ -34,7 +38,6 @@
                 <a class="navbar-brand">Takeshi Mochida</a>
             </div>
 
-            <!-- Navbar -->
             <div class="navbar-collapse" collapse="collapseService.getState()">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{ active: isActive('/home')}"><a href="#home" ng-click="collapseService.flipState()" >Home</a></li>
@@ -48,6 +51,6 @@
     </nav>
 
     <!-- Stuff from /pages injected here -->
-    <div ng-view></div>
+    <div ng-view class="page {{pageClass}}"></div>
 </body>
 </html>
