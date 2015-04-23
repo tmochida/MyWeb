@@ -29,16 +29,17 @@
 }
 
 html {
-    background: black;
+    background: #000000;
 }
 
 .page {
-    bottom:0;
-    padding-top:200px;
-    position:absolute;
-    text-align:center;
     top:0;
+    padding-top:100px;
+    bottom:0;
+    text-align:center;
     width:100%;
+    position:absolute;
+    color:#FFFFFF;
 }
 
 /* Angular animation styles */
