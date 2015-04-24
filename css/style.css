@@ -28,17 +28,18 @@
     color: #FFFFFF;
 }
 
-html {
+body {
     background: #000000;
+    /*background:green;*/
 }
 
 .page {
-    top:0;
-    padding-top:100px;
-    bottom:0;
-    text-align:center;
     width:100%;
-    position:absolute;
+    top:0;
+    bottom:0;
+    padding-top:100px;
+    text-align:center;
+    background:black;
     color:#FFFFFF;
 }
 
@@ -56,5 +57,13 @@ html {
     -webkit-animation:fadeOut 0.5s both ease-in;
     -moz-animation:fadeOut 0.5s both ease-in;
     animation:fadeOut 0.5s both ease-in;   
+}
+
+.footer {
+    width:100%;
+    bottom: 0;
+    text-align:center;
+    background: #222222;
+    color:#FFFFFF;
 }
 
