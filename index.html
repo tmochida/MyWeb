@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="canonical" href="http://www.takeshimochida.com" /> -->
     <link rel="icon" sizes="16x16 24x24 32x32 48x48 96x96 152x152" href="favicon.ico">
+    <!-- <link rel="canonical" href="http://www.takeshimochida.com" /> -->
     <base href="/">
+    <title>Takeshi Mochida</title>
 
     <!-- CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- AngularJS -->
@@ -21,8 +23,6 @@
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
     <script src="app/services/collapseService.js"></script>
-    
-    <title>Takeshi Mochida</title>
 </head>
 <body style="padding-top:50px;">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navBarCtrl">
@@ -46,7 +46,7 @@
                     <li ng-class="{ active: isActive('/projects')}"><a href="#projects" ng-click="collapseService.flipState()">Projects</a></li>
                     <li ng-class="{ active: isActive('/contact')}"><a href="#contact" ng-click="collapseService.flipState()" >Contact</a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </div><!-- /.container -->
     </nav>
 
