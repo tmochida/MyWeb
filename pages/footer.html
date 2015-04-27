@@ -1,6 +1,12 @@
 <!-- footer.html -->
-<footer class="footer">
-    <div class="container">
-        <p>Copyright &copy; 2015 Takeshi Mochida.</p>
+<div class="container-fluid footer" ng-controller="footerCtrl">
+    <div class="row footer-icons sample-show-hide" ng-hide="isActive('/contact')">
+        <a class="a-icon a-footer" href=""><span class="fa fa-envelope-o"></span></a>
+        <a class="a-icon a-footer" href="https://github.com/tmochida"><span class="fa fa-github"></span></a>
+        <a class="a-icon a-footer" href="https://www.linkedin.com/in/takeshimochida"><span class="fa fa-linkedin"></span></a>
     </div>
-</footer>
+    <div class="row">
+        <hr class="footer" />
+        <p>&copy; 2014&ndash;2015 Takeshi Mochida</p>
+    </div>
+</div>
