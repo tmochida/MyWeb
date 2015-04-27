@@ -1,13 +1,20 @@
+/* style.css */
+
 /* navbar styles */
 .navbar-default {
-    z-index:9999;
+    z-index: 9999;
     background-color: #000000;
     border-color: #000000;
 }
 .navbar-default .navbar-brand {
     color: #FFFFFF;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
     color: #FFFFFF;
 }
 .navbar-default .navbar-nav > .active {
@@ -20,43 +27,61 @@
     color: #000000;
     background: #FFFFFF;
 }
-.navbar-default .navbar-nav > li {
-    color: #FFFFFF;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #FFFFFF;
-}
 
 body {
+    padding-top: 50px;
     background: #000000;
-    /*background:green;*/
 }
 
+/* page styles and animation */
 .page {
-    width:100%;
-    top:0;
-    bottom:0;
-    padding-top:100px;
-    text-align:center;
-    background:black;
-    color:#FFFFFF;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    padding-top: 100px;
+    text-align: center;
+    background: #000000;
+    color: #FFFFFF;
 }
-
-/* Angular animation styles */
 .page.ng-enter {
     -webkit-backface-visibility: hidden;
-    -webkit-animation:fadeIn 0.5s both ease-in;
-    -moz-animation:fadeIn 0.5s both ease-in;
-    animation:fadeIn 0.5s both ease-in;
+    -webkit-animation: fadeIn 0.5s both ease-in;
+    -moz-animation: fadeIn 0.5s both ease-in;
+    animation: fadeIn 0.5s both ease-in;
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 .page.ng-leave {
     -webkit-backface-visibility: hidden;
-    -webkit-animation:fadeOut 0.5s both ease-in;
-    -moz-animation:fadeOut 0.5s both ease-in;
-    animation:fadeOut 0.5s both ease-in;   
+    -webkit-animation: fadeOut 0.5s both ease-in;
+    -moz-animation: fadeOut 0.5s both ease-in;
+    animation: fadeOut 0.5s both ease-in;   
+}
+
+
+a.a-icon,
+a.a-icon:hover,
+a.a-icon:focus {
+    color: inherit;
+}
+a.a-footer,
+a.a-footer:hover,
+a.a-footer:focus {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+hr.footer {
+    border-color: #000000;
+    border-style: solid;
+    height: 1px;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.contact-icon {
+    font-size: 5em;
 }
 
 .footer {
@@ -64,6 +89,11 @@ body {
     bottom: 0;
     text-align:center;
     background: #222222;
-    color:#FFFFFF;
+    color: #FFFFFF;
+}
+
+.footer-icons {
+    margin-top: 5px;
+    font-size: 2em;
 }
 
