@@ -1,10 +1,15 @@
 <!-- home.html -->
-<div class="text-center">
-    <p>Hi, my name is <strong>Takeshi Mochida</strong>.</p>
-    <p>I am a second year studying computer science at the University of California, Berkeley.</p>
-    <p>I'm interested in software engineering, particularly in backend development.</p>
-
+<div class="container">
+    <div class="row">
+        <div class="" style="height:{{canvasService.height()/3-90}}px;"></div>
+    </div>
+    <div class="row">
+        <div class="banner">
+            <h1>{{texts.name}}</h1>
+            <h3>{{texts.label_main}}</h3>
+            <h3>{{texts.label_major}}</h3>
+        </div>
+    </div>
 </div>
 
-<div ng-include src="'pages/footer.html'" class="footer"></div>
-
+<div ng-include src="'views/footer.html'" class="footer"></div>

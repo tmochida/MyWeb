@@ -1,0 +1,14 @@
+{
+    "lang": {
+        "en":"英語",
+        "ja":"日本語"
+    },
+    "navbar": {
+        "home":"ホーム",
+        "about":"私について",
+        "resume":"履歴書",
+        "projects":"プロジェクト",
+        "contact":"連絡",
+        "language":"言語"
+    }
+}

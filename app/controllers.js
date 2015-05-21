@@ -9,6 +9,7 @@ app.controller('mainCtrl', function($scope, collapseService, canvasService, tran
   $scope.collapseService = collapseService;
   $scope.canvasService = canvasService;
   $scope.translationService = translationService;
+  translationService.getTranslations($scope, 'main');
 });
 
 // Controller for navbar
@@ -21,6 +22,7 @@ app.controller('navBarCtrl', function($scope, $location) {
 // Declare controllers. Nothing happens for now
 app.controller('homeCtrl', function($scope, translationService) {
     $scope.pageClass = 'home';
+    translationService.getTranslations($scope, $scope.pageClass);
 });
 
 app.controller('aboutCtrl', function($scope, translationService) {
@@ -37,4 +39,5 @@ app.controller('projectsCtrl', function($scope, translationService) {
 
 app.controller('contactCtrl', function($scope, translationService) {
     $scope.pageClass = 'contact';
+    translationService.getTranslations($scope, $scope.pageClass);
 });

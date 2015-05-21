@@ -1,24 +1,27 @@
 <!-- contact.html -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <a class="a-icon" href=""><span class="fa fa-envelope-o contact-icon"></span></a>
-            <h3>Mail</h3>
-            <p>Email me! I would love to get in touch with you</a>
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs" style="height:{{canvasService.height()/3-90}}px;"></div>
         </div>
-        <div class="col-md-4">
-            <a class="a-icon" href="https://github.com/tmochida"><span class="fa fa-github contact-icon"></span></a>
-            <h3>Github</h3>
-            <p>Here's my <a href="https://github.com/tmochida">GitHub profile</a>. Hopefully more repos and commits will be added in the near future.<p>
+        <div class="row">
+            <div class="col-sm-4">
+                <a class="a-icon" href="javascript:;"><span class="fa fa-envelope-o contact-icon"></span></a>
+                <h2>{{ texts.mail.label }}</h2>
+                <p>{{ texts.mail.comment }}</p>
+            </div>
+            <div class="col-sm-4">
+                <a class="a-icon" href="https://github.com/tmochida"><span class="fa fa-github contact-icon"></span></a>
+                <h2>{{ texts.github.label }}</h2>
+                <p>{{ texts.github.comment }}</p>
+            </div>
+            <div class="col-sm-4">
+                <a class="a-icon" href="https://www.linkedin.com/in/takeshimochida"><span class="fa fa-linkedin contact-icon"></span></a>
+                <h2>{{ texts.linkedin.label }}</h2>
+                <p>{{ texts.linkedin.comment }}</p>
+            </div>
         </div>
-        <div class="col-md-4">
-            <a class="a-icon" href="https://www.linkedin.com/in/takeshimochida"><span class="fa fa-linkedin contact-icon"></span></a>
-            <h3>LinkedIn</h3>
-            <p>Check me out at my <a href="https://www.linkedin.com/in/takeshimochida">LinkedIn profile</a><p>
-        </div>
-    </div>
-    <div class="text-center">
     </div>
 </div>
 
-<div ng-include src="'pages/footer.html'" class="footer"></div>
+<div ng-include src="'views/footer.html'" class="footer"></div>

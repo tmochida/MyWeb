@@ -1,0 +1,14 @@
+{
+    "lang": {
+        "en":"English",
+        "ja":"Japanese"
+    },
+    "navbar": {
+        "home":"Home",
+        "about":"About Me",
+        "resume":"Resume",
+        "projects":"Projects",
+        "contact":"Contact",
+        "language":"Language"
+    }
+}
