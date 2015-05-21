@@ -1,5 +1,4 @@
 RewriteEngine On
-Options FollowSymLinks
 
 ErrorDocument 403 /error.html
 ErrorDocument 404 /error.html
