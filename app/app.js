@@ -4,34 +4,34 @@
  */
 
 // Declare app module
-var app = angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngCookies']);
+var app = angular.module('app', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ui.bootstrap']);
 
 // Declare app routes
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         // set up routing and controller
         .when('/', {
-            templateUrl :   'pages/home.html',
+            templateUrl :   'views/home.html',
             controller  :   'homeCtrl'
         })
         .when('/home', {
-            templateUrl :   'pages/home.html',
+            templateUrl :   'views/home.html',
             controller  :   'homeCtrl'
         })
         .when('/about', {
-            templateUrl :   'pages/about.html',
+            templateUrl :   'views/about.html',
             controller  :   'aboutCtrl'
         })
         .when('/resume', {
-            templateUrl :   'pages/resume.html',
+            templateUrl :   'views/resume.html',
             controller  :   'resumeCtrl'
         })
         .when('/projects', {
-            templateUrl :   'pages/projects.html',
+            templateUrl :   'views/projects.html',
             controller  :   'projectsCtrl'
         })
         .when('/contact', {
-            templateUrl :   'pages/contact.html',
+            templateUrl :   'views/contact.html',
             controller  :   'contactCtrl'
         })
         .otherwise({

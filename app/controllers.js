@@ -5,8 +5,10 @@
 
 // MainCtrl
 // Used for controlling collapse state for mobile view
-app.controller('mainCtrl', function($scope, collapseService) {
+app.controller('mainCtrl', function($scope, collapseService, canvasService, translationService) {
   $scope.collapseService = collapseService;
+  $scope.canvasService = canvasService;
+  $scope.translationService = translationService;
 });
 
 // Controller for navbar
@@ -17,23 +19,22 @@ app.controller('navBarCtrl', function($scope, $location) {
 });
 
 // Declare controllers. Nothing happens for now
-app.controller('homeCtrl', function($scope) {
+app.controller('homeCtrl', function($scope, translationService) {
     $scope.pageClass = 'home';
 });
 
-app.controller('aboutCtrl', function($scope) {
+app.controller('aboutCtrl', function($scope, translationService) {
     $scope.pageClass = 'about';
 });
 
-app.controller('resumeCtrl', function($scope) {
+app.controller('resumeCtrl', function($scope, translationService) {
     $scope.pageClass = 'resume';
 });
 
-app.controller('projectsCtrl', function($scope) {
+app.controller('projectsCtrl', function($scope, translationService) {
     $scope.pageClass = 'projects';
 });
 
-app.controller('contactCtrl', function($scope) {
+app.controller('contactCtrl', function($scope, translationService) {
     $scope.pageClass = 'contact';
 });
-
