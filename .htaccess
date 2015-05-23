@@ -4,8 +4,8 @@ ErrorDocument 403 /error.html
 ErrorDocument 404 /error.html
 ErrorDocument 500 /error.html
 
-RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /#/$1 [L]
+RewriteRule ^ index.html [L]
