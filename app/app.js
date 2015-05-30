@@ -14,10 +14,6 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl :   'views/home.html',
             controller  :   'homeCtrl'
         })
-        .when('/home', {
-            templateUrl :   'views/home.html',
-            controller  :   'homeCtrl'
-        })
         .when('/about', {
             templateUrl :   'views/about.html',
             controller  :   'aboutCtrl'

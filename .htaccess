@@ -1,8 +1,8 @@
 RewriteEngine On
 
-ErrorDocument 403 /error.html
-ErrorDocument 404 /error.html
-ErrorDocument 500 /error.html
+ErrorDocument 403 /index.html
+ErrorDocument 404 /index.html
+ErrorDocument 500 /index.html
 
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
