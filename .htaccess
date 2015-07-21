@@ -1,11 +1,15 @@
 RewriteEngine On
+Options FollowSymLinks
 
-ErrorDocument 403 /index.html
-ErrorDocument 404 /index.html
-ErrorDocument 500 /index.html
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 403 /
+#ErrorDocument 404 /
+ErrorDocument 500 /
 
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-RewriteRule ^ index.html [L]
+RewriteRule ^ / [L]

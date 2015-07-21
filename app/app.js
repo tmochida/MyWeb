@@ -35,4 +35,5 @@ app.config(function($routeProvider, $locationProvider) {
 	})
     // set HTML5 mode for clean URL
     $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
 });
