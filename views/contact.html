@@ -1,25 +1,23 @@
 <!-- contact.html -->
-<div class="banner">
-    <div class="container">
-        <div class="row">
-            <div class="hidden-xs" style="height:{{canvasService.height()/3-90}}px;"></div>
+<div class="container text-center">
+    <div class="row">
+        <div class="hidden-xs" ng-style="{'height': offsetHeight + 'px'}"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <a class="a-icon" href="mailto:{{email}}"><span class="fa fa-envelope-o contact-icon"></span></a>
+            <h2>{{ texts.mail.label }}</h2>
+            <p>{{ texts.mail.comment }}</p>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <a class="a-icon" href="javascript:;"><span class="fa fa-envelope-o contact-icon"></span></a>
-                <h2>{{ texts.mail.label }}</h2>
-                <p>{{ texts.mail.comment }}</p>
-            </div>
-            <div class="col-sm-4">
-                <a class="a-icon" href="https://github.com/tmochida"><span class="fa fa-github contact-icon"></span></a>
-                <h2>{{ texts.github.label }}</h2>
-                <p>{{ texts.github.comment }}</p>
-            </div>
-            <div class="col-sm-4">
-                <a class="a-icon" href="https://www.linkedin.com/in/takeshimochida"><span class="fa fa-linkedin contact-icon"></span></a>
-                <h2>{{ texts.linkedin.label }}</h2>
-                <p>{{ texts.linkedin.comment }}</p>
-            </div>
+        <div class="col-sm-4">
+            <a class="a-icon" href="https://github.com/tmochida"><span class="fa fa-github contact-icon"></span></a>
+            <h2>{{ texts.github.label }}</h2>
+            <p>{{ texts.github.comment }}</p>
+        </div>
+        <div class="col-sm-4">
+            <a class="a-icon" href="https://www.linkedin.com/in/takeshimochida"><span class="fa fa-linkedin contact-icon"></span></a>
+            <h2>{{ texts.linkedin.label }}</h2>
+            <p>{{ texts.linkedin.comment }}</p>
         </div>
     </div>
 </div>
