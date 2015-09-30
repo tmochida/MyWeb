@@ -74,7 +74,8 @@ a.a-inherit:focus {
     border-color: #000000;
 }
 .navbar-default .navbar-brand,
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
     color: #FFFFFF;
 }
 
