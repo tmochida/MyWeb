@@ -3,6 +3,7 @@
 app.factory('infoService', function($cookies, $http, $q, $resource, $window) {
     var metaDescription = "";
     
+    var KEY_LOCALE = "locale"; // key for storing locale in cookies
     var DEFAULT_LOCALE = 'en';
     
     var DEFAULT_TITLE = "Takeshi Mochida";
@@ -10,8 +11,8 @@ app.factory('infoService', function($cookies, $http, $q, $resource, $window) {
     var pageClass = "";
 
     // set locale cookie to default if it doesn't exist
-    if (typeof($cookies.locale) == 'undefined') {
-        $cookies.locale = DEFAULT_LOCALE;
+    if (typeof($cookies.get(KEY_LOCALE)) == 'undefined') {
+        $cookies.put("locale", DEFAULT_LOCALE);
     }
 
     return {
@@ -23,10 +24,10 @@ app.factory('infoService', function($cookies, $http, $q, $resource, $window) {
         },
 
         getLocale: function() {
-            return $cookies.locale;
+            return $cookies.get(KEY_LOCALE);
         },
         setLocale: function(newLocale) {
-            $cookies.locale = newLocale;
+            $cookies.put(KEY_LOCALE, newLocale);
             $window.location.reload();
         },
         getTranslations: function($scope, className) {
