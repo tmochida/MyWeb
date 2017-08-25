@@ -8,10 +8,14 @@ ErrorDocument 403 /
 #ErrorDocument 404 /
 ErrorDocument 500 /
 
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]
 
+# Exclude certain directories from rewrite rules
+RewriteRule ^(data|static)($|/) - [L]
+
+# Redirect nonexistent URI to root (for Angular)
 RewriteRule ^ / [L]
 
 <ifmodule mod_deflate.c>
